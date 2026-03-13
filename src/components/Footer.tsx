@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="footer-brand">
             <h2 className="footer-logo">PLANET</h2>
             <p className="footer-desc">
-              Engineering the future of digital experiences with minimalist design and scalable architecture.
+               the future of digital experiences with minimalist design and scalable architecture.
             </p>
             <div className="footer-socials">
               <a href="#" className="social-link"><Twitter size={20} /></a>
