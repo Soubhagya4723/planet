@@ -1,0 +1,10 @@
+src/App.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Footer.tsx(2,1): error TS6133: 'motion' is declared but its value is never read.
+src/components/ParticleBackground.tsx(4,1): error TS6133: 'random' is declared but its value is never read.
+src/components/ParticleBackground.tsx(4,25): error TS2307: Cannot find module 'three/examples/jsm/math/MathUtils' or its corresponding type declarations.
+src/components/ParticleBackground.tsx(7,15): error TS2554: Expected 1 arguments, but got 0.
+src/components/ParticleBackground.tsx(24,13): error TS6133: 'state' is declared but its value is never read.
+src/components/Section.tsx(1,10): error TS1484: 'ReactNode' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/pages/BlogPost.tsx(34,9): error TS6133: 'id' is declared but its value is never read.
+src/pages/ProjectDetail.tsx(27,9): error TS6133: 'id' is declared but its value is never read.
+src/pages/Services.tsx(2,19): error TS6133: 'SectionHeader' is declared but its value is never read.

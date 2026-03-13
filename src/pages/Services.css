@@ -1,0 +1,101 @@
+.services-page {
+  padding-bottom: 80px;
+}
+
+.perspective-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  perspective: 1200px;
+}
+
+.svc-card {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  background: rgba(10, 15, 31, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  backdrop-filter: blur(15px);
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s ease;
+}
+
+.svc-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
+}
+
+.svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.svc-card:hover::before {
+  opacity: 1;
+}
+
+.svc-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(56, 189, 248, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  margin-bottom: 32px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.1);
+  transform: translateZ(30px); /* Pops it off the card slightly during 3D rotation */
+}
+
+.svc-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  transform: translateZ(20px);
+}
+
+.svc-card p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  transform: translateZ(10px);
+}
+
+/* Optional Bottom Glow indicator */
+.svc-card-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 2px;
+  background: var(--accent-color);
+  box-shadow: 0 0 20px 2px var(--highlight-glow);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.svc-card:hover .svc-card-glow {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .svc-card {
+    padding: 32px;
+  }
+}
